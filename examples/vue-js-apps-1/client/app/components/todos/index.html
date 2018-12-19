@@ -1,0 +1,5 @@
+<section class="todoapp">
+  <todo-header v-on:event-add-todo="handleAddTodo"></todo-header>
+  <todo-main v-bind:todos="todos" v-bind:visibility="visibility" v-on:event-edit-todo="handleEditTodo" v-on:event-remove-todo="handleRemoveTodo"></todo-main>
+  <todo-footer v-bind:todos="todos" v-bind:visibility="visibility" v-on:event-remove-completed-todo="handleRemoveCompleted"></todo-footer>
+</section>

@@ -1,0 +1,21 @@
+version: '3'
+services:
+  todos-mongo:
+    container_name: todos-mongo
+    image: mongo:latest
+    ports:
+    - 27017:27017
+  todos-server:
+    container_name: todos-server
+    build: ./
+    image: todos-server:latest
+    volumes:
+      - ./:/var/www
+    ports:
+      - 3000:3000
+      - 5858:5858
+    command: ['node', '--inspect=0.0.0.0:5858', '/var/www/server/dist/boot.js']
+    depends_on:
+      - todos-mongo
+    links:
+      - todos-mongo

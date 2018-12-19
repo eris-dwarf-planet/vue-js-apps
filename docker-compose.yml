@@ -1,0 +1,12 @@
+version: '3'
+services:
+  vue-js-apps-server:
+    container_name: vue-js-apps-server
+    build: ./
+    image: vue-js-apps-server:latest
+    volumes:
+      - ./:/var/www
+    ports:
+      - 8080:80
+      - 5858:5858
+    command: ['node', '--inspect=0.0.0.0:5858', '/var/www/dist/Server.js']

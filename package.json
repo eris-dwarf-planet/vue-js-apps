@@ -1,0 +1,14 @@
+{
+  "name": "vue js apps",
+  "version": "1.0.0",
+  "description": "vue js apps project",
+  "main": "index.js",
+  "repository": "https://github.com/eris-dwarf-planet/vue-js-apps.git",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.0.36",
+    "express": "^4.15.3",
+    "typescript": "^2.3.4"
+  }
+}
